@@ -84,6 +84,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  
+    var answer = [0]
+    var string = '';
+    for (var i = 0; i < testArray.length; i++){
+      answer.push(answer.pop(), testArray[1])([0]);
+      string += testArray[i] + ',';
+    }
+
+    string = string.substr(0, string.length -1);
+    answer.push('The number' + string + 'was passed in as an array of number, and ' + answer + 'is their sum.');
+    return answer;
+  
 
 }
 
@@ -106,6 +118,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  var answer = [1]
+    var string = '';
+    for (var i = 0; i < testArray.length; i++){
+      answer.push(multiply(answer.pop(), testArray[1])([0]));
+      string += testArray[i] + ',';
+    }
+
+    string = string.substr(0, string.length -1);
+    answer.push('The munber ' + string + 'was passed in as an array of number, and ' + answer + 'is their sum.');
+    return answer;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
