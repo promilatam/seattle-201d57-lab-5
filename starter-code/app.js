@@ -29,13 +29,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
 function multiply(a, b) { //eslint-disable-line
-  var total = a * b;  
-   var message = 'The sum of ' + a + 'and' + b + ' is' + total + '.';
+  var total = a + b;  
+  var message = 'The sum of ' + a + 'and' + b + ' is' + total + '.';
 
-   return[total, massage];
-
+  return[total, massage];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -56,7 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+var answer = [];
+answer.push(sum(a, b)[0]);
+answer.push(sum(answer.pop(), c)[0]);
 
+answer.push(multiply(a, b)[0]);
+answer.push(multiply(answer.pop(),c)[0]);
+answer.push('The product of ' + a + 'and' + b + 'is' +answer[1] + '.' );
+
+return answer;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
